@@ -16,7 +16,7 @@ class Homepage extends Component {
     componentDidMount(){
         Axios.get("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=4e7479f8bdd049b790f61643190505&q=Kuala%20Lumpur&format=json&num_of_days=1")
         .then(result=>{
-            console.log(result.data.data.weather[0].date);
+            
             this.setState({
                 city:result.data.data.request[0].query,
                 time:result.data.data.weather[0].date
